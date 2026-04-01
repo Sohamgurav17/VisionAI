@@ -84,4 +84,4 @@ console.log(appointments, "appointments in dashboardpage")
   )
 }
 
-export default DashboardPage
+export default DashboardPage;

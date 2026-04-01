@@ -16,7 +16,7 @@ with open('countries+states+cities.json', 'r', encoding='utf-8') as file:
     country_data = json.load(file)
 dataset_path = './archive/dataset'  # Update with the correct path
 dataset = datasets.ImageFolder(root=dataset_path)
-genai.configure(api_key="AIzaSyC4XihK2e8I90bzrYMWfttp1qBsWNesCHI")
+genai.configure(api_key="AIzaSyBUzC0JvHTaKtBXWwuJHpcH179dZenau5o")
 generation_config = {
   "temperature": 1,
   "top_p": 0.95,
@@ -27,7 +27,7 @@ generation_config = {
 
 # Create the model
 model1 = genai.GenerativeModel(
-  model_name="gemini-1.5-flash",
+  model_name="gemini-2.5-flash",
   generation_config=generation_config,
 )
 

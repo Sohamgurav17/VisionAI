@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { useAuth } from '../helper/AuthContext';
 import Cookies from 'js-cookie';
 
-const NavBar = ({ isLoggedIn, onLoginClick }) => {
+const NavBar = ({ isLoggedIn, onLoginClick, onSignupClick }) => {
     const location = useLocation();
     const {user} = useAuth()
     // const user = Cookies.get('user')
@@ -59,6 +59,12 @@ const NavBar = ({ isLoggedIn, onLoginClick }) => {
             </div>
             
             <div className='flex gap-4 mr-12'>
+            <button
+  onClick={onSignupClick}
+  className="flex items-center gap-2 bg-purple-600 rounded-full p-5 text-white"
+>
+  Sign Up
+</button>
             <button 
         onClick={user === 'Guest' ? onLoginClick : undefined} // If user is logged out, call onLoginClick; if logged in, call onLogoutClick
         className={`flex items-center gap-2 ${user !== 'Guest' ? 'bg-green-600' : 'bg-blue-600'} rounded-full p-5 text-white`}

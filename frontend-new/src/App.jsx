@@ -6,6 +6,8 @@ import DashboardPage from './pages/DashboardPage';
 import ReportsPage from './pages/ReportsPage';
 import AppointmentPage from './pages/AppointmentPage';
 import FormPage from './pages/FormPage';
+import AboutPage from './pages/AboutPage';
+import BlogPage from './pages/BlogPage';
 
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
@@ -22,6 +24,8 @@ function App() {
         <Route path="/reports" element={<ReportsPage/>} />
         <Route path="/appointments" element={<AppointmentPage/>} />
         <Route path="/eye-test" element={<FormPage/>} />
+        <Route path="/about" element={<AboutPage/>} />
+        <Route path="/blog" element={<BlogPage/>} />
       </Routes>
     </Router>
     </AuthProvider>
